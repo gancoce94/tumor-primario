@@ -2,19 +2,19 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Nombre:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.name %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Email:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.email %>
     </div>
   </p>
@@ -23,19 +23,19 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Edad:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.edad %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Género:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.genero.capitalize %>
     </div>
   </p>
@@ -43,19 +43,19 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Tipo Histológico:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.tipo_histologico.capitalize %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Grado Tumor:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.grado_tumor.capitalize %>
     </div>
   </p>
@@ -63,19 +63,19 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Dolor a los Huesos:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.hueso %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Medula Osea:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.medula_osea %>
     </div>
   </p>
@@ -83,19 +83,19 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Problemas en los pulmones:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.pulmon %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Pleura:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.pleura %>
     </div>
   </p>
@@ -103,19 +103,19 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Peritoneo:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.peritoneum %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Problemas al Hígado:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.higado %>
     </div>
   </p>
@@ -123,54 +123,93 @@
 
 <div class="row">
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Dolor de cabeza (cerebro):</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.cerebro %>
     </div>
   </p>
 
   <p>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <b>Problemas en la piel:</b>
     </div>
-    <div class="input-field col s3">
+    <div class="input-field col s3 center-align">
       <%= @tumor.piel %>
     </div>
   </p>
 </div>
 
-<p>
-  <b>Cuello:</b>
-  <%= @tumor.cuello %>
-</p>
+<div class="row">
+  <p>
+    <div class="input-field col s3 center-align">
+      <b>Dolor cuello:</b>
+    </div>
+    <div class="input-field col s3 center-align">
+      <%= @tumor.cuello %>
+    </div>
+  </p>
 
-<p>
-  <b>Supraclavicular:</b>
-  <%= @tumor.supraclavicular %>
-</p>
+  <p>
+    <div class="input-field col s3 center-align">
+      <b>Dolor al corazón (supraclavicular):</b>
+    </div>
+    <div class="input-field col s3 center-align">
+      <%= @tumor.supraclavicular %>
+    </div>
+  </p>
+</div>
 
-<p>
-  <b>Axilar:</b>
-  <%= @tumor.axilar %>
-</p>
+<div class="row">
+  <p>
+    <div class="input-field col s3 center-align">
+      <b>Problemas del ganglio axilar:</b>
+    </div>
+    <div class="input-field col s3 center-align">
+      <%= @tumor.axilar %>
+    </div>
+  </p>
 
-<p>
-  <b>Mediastino:</b>
-  <%= @tumor.mediastino %>
-</p>
+  <p>
+    <div class="input-field col s3 center-align">
+      <b>Dolor al pecho (mediastino):</b>
+    </div>
+    <div class="input-field col s3 center-align">
+      <%= @tumor.mediastino %>
+    </div>
+  </p>
+</div>
 
-<p>
-  <b>Abdominal:</b>
-  <%= @tumor.abdominal %>
-</p>
+<div class="row">
+  <p>
+    <div class="input-field col s3 center-align">
+      <b>Dolor abdominal:</b>
+    </div>
+    <div class="input-field col s3 center-align">
+      <%= @tumor.abdominal %>
+    </div>
+  </p>
 
-<p>
-  <b>Tipo tumor:</b>
-  <%= @tumor.tipo_tumor %>
-</p>
-
-<%= link_to 'Edit', edit_tumor_path(@tumor) %> |
-<%= link_to 'Back', tumors_path %>
+  <p>
+    <div class="input-field col s3 center-align">
+      <b>Tipo de tumor:</b>
+    </div>
+    <div class="input-field col s3 center-align">
+      <%= @tumor.tipo_tumor %>
+    </div>
+  </p>
+</div>
+<br>
+<div class="row">
+   <div class="input-field col s2"></div>
+   <div>
+     <%= link_to 'Edtar', edit_tumor_path(@tumor), :class => "actions btn waves-effect waves-light col s3 center-align white-text " %>
+   </div>
+   <div class="input-field col s2"></div>
+   <div>
+     <%= link_to 'Regresar', tumors_path, :class => "actions btn waves-effect waves-light col s3 pink center-align white-text " %>    
+   </div>
+  <div class="input-field col s2"></div>
+</div>
 </div>

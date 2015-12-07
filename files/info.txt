@@ -3,3 +3,7 @@ El programa fue desarrollado en Ruby utilizando el framework Ruby on Rails y apl
 Para descargar weka valla al siguiente link:
 
 http://www.cs.waikato.ac.nz/ml/weka/downloading.html
+
+o
+
+http://sourceforge.net/projects/weka/

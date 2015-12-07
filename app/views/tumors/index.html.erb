@@ -43,10 +43,10 @@
               <td><%= tumor.tipo_histologico.capitalize %></td>
               <td><%= tumor.grado_tumor.capitalize %></td>
               <td><%= tumor.tipo_tumor %></td>
-              <td><%= link_to 'Mostrar Todo', tumor, :class => "actions btn waves-effect waves-light col s3 pink center-align white-text " %></td>
+              <td><%= link_to 'Mostrar Todo', tumor, :class => "actions btn waves-effect waves-light col s3 blue center-align white-text " %></td>
               <td><%= link_to 'Editar', edit_tumor_path(tumor), :class => "actions btn waves-effect waves-light col s3 green center-align white-text " %></td>
               <td><%= link_to 'Eliminar', tumor, method: :delete, data: { confirm: '¿Está seguro de querer eliminar el registro?' },
-                    :class => "actions btn waves-effect waves-light col s3 blue center-align white-text " %></td>
+                    :class => "actions btn waves-effect waves-light col s3 pink center-align white-text " %></td>
             </tr>
           <% end %>
         </tbody>
