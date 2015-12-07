@@ -14,6 +14,13 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+
 development:
   adapter: postgresql
   encoding: unicode
@@ -26,6 +33,14 @@ test:
   adapter: postgresql
   encoding: unicode
   database: Tumor_Test
+  pool: 5
+  username: postgres
+  password: 123x
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: Tumor_Production
   pool: 5
   username: postgres
   password: 123x
