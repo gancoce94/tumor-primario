@@ -1,0 +1,5 @@
+El programa fue desarrollado en Ruby utilizando el framework Ruby on Rails y aplicando el clasificador RandomTree de weka versión 3.6.13 al archivo tumor-primario.arff
+
+Para descargar weka valla al siguiente link:
+
+http://www.cs.waikato.ac.nz/ml/weka/downloading.html

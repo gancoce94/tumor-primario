@@ -1,0 +1,596 @@
+% Citation Request:
+%    This primary tumor domain was obtained Desde the University Medical Centre,
+%    Institute of Oncology, Ljubljana, Yugoslavia.  Thanks go to M. Zwitter and 
+%    M. Soklic for providing the data.  Please include this citation if you plan
+%    to use this database.
+% 
+% 1. Title: Primary Tumor Domain
+% 
+% 2. Sources:
+%      (a) Source:
+%      (b) Donors: Igor Kononenko, 
+%                  University E.Kardelj
+%                  Faculty for electrical engineering
+%                  Trzaska 25
+%                  61000 Ljubljana (tel.: (38)(+61) 265-161
+% 
+%                  Bojan Cestnik
+%                  Jozef Stefan Institute
+%                  Jamova 39
+%                  61000 Ljubljana
+%                  Yugoslavia (tel.: (38)(+61) 214-399 ext.287) 
+%      (c) Date: November 1988
+% 
+% 3. Past Usedad: (sveral)
+%     1. Cestnik,G., Konenenko,I, & Bratko,I. (1987). Assistant-86: A
+%        Knowledge-Elicitation Tool for Sophisticated Users.  In I.Bratko
+%        & N.Lavrac (Eds.) Progress in Machine Learning, 31-45, Sigma Press.
+%        -- Assistant-86: 44% accuracy
+%     2. Clark,P. & Niblett,T. (1987). Induction in Noisy Domains.  In
+%        I.Bratko & N.Lavrac (Eds.) Progress in Machine Learning, 11-30,
+%        Sigma Press.
+%        -- Simple Basi: 48% accuracy
+%        -- CN2 (95% threshold): 45%
+%     3. Michalski,R., Mozetic,I. Hong,J., & Lavrac,N. (1986).  The Multi-Purpose
+%        Incremental Learning System AQ15 and its Testing Applications to Three
+%        Medical Domains.  In Proceedings of the Fifth National Conference on
+%        Artificial Intelligence, 1041-1045. Philadelphia, PA: Morgan Kaufmann.
+%        -- Experts: 42% accuracy 
+%        -- AQ15: 29-41%
+% 
+% 4. Relevant Information:
+%      This is one of three domains provided by the Oncology Institute
+%      that has repeatedly appeared in the machine learning literature.
+%      (See also mama-cancer and lymphography.)
+% 
+% 5. Number of Instances: 339
+% 
+% 6. Number of Attributes: 18 including the class attribute
+% 
+% 7. Attribute Information: (class is location of tumor)
+%     --- NOTE: All attribute values in the database have been entered as
+%               numeric values corresponding to their index in the list
+%               of attribute values for that attribute domain as given below.
+%     1. class: pulmon, head & cuello, esophasus, tiroides, estomago, duoden & sm.int,
+%               colon, recto, ano, glandulas salivales, pancreas, gallblader,
+%               higado, rinion, vejiga, testiculos, prostata, ovarios, cuerpo uterino, 
+%               cuello uterino, vagina, mama
+%     2. edad:   <30, 30-59, >=60
+%     3. genero:   hombre, mujer
+%     4. tipo-histologico: epidermoide, adenoide, anaplasico
+%     5. grado-de-tumor: bueno, intermedio, grave
+%     6. hueso: si, no
+%     7. medula-osea: si, no
+%     8. pulmon: si, no
+%     9. pleura: si, no
+%    10. peritoneum: si, no
+%    11. higado: si, no
+%    12. cerebro: si, no
+%    13. piel: si, no
+%    14. cuello: si, no
+%    15. supraclavicular: si, no
+%    16. axilar: si, no
+%    17. madiastino: si, no
+%    18. abdominal: si, no
+% 
+% 8. Missing Attribute Values: (? indicates unknown value)
+%     Attribute#: Number of missing values
+%     1: 0
+%     2: 0
+%     3: 1
+%     4: 67
+%     5: 155
+%     6: 0
+%     7: 0
+%     8: 0
+%     9: 0
+%     10: 0
+%     11: 0
+%     12: 0
+%     13: 1
+%     14: 0
+%     15: 0
+%     16: 1
+%     17: 0
+%     18: 0
+% 
+% 9. Class Distribution: 
+%     Class Index:   Number of instances in class:
+%               1:   84
+%               2:   20
+%               3:   9
+%               4:   14
+%               5:   39
+%               6:   1
+%               7:   14
+%               8:   6
+%               9:   0
+%              10:   2
+%              11:   28
+%              12:   16
+%              13:   7
+%              14:   24
+%              15:   2
+%              16:   1
+%              17:   10
+%              18:   29
+%              19:   6
+%              20:   2
+%              21:   1
+%              22:   24
+%
+%
+%
+%
+%
+% Etiquetado de valores en atributo: edad
+%    Desde: 1                       A: '<30'               
+%    Desde: 2                       A: '30-59'             
+%    Desde: 3                       A: '>=60'              
+%
+%
+% Etiquetado de valores en atributo: genero
+%    Desde: 1                       A: hombre                
+%    Desde: 2                       A: mujer              
+%
+%
+% Etiquetado de valores en atributo: tipo-histologico
+%    Desde: 1                       A: epidermoide          
+%    Desde: 2                       A: adenoide               
+%    Desde: 3                       A: anaplasico          
+%
+%
+% Etiquetado de valores en atributo: grado-de-tumor
+%    Desde: 1                       A: bueno                
+%    Desde: 2                       A: intermedio              
+%    Desde: 3                       A: grave              
+%
+%
+% Etiquetado de valores en atributo: hueso
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: medula-osea
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: pulmon
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: pleura
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: peritoneum
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: higado
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: cerebro
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: piel
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: cuello
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: supraclavicular
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: axilar
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: madiastino
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: abdominal
+%    Desde: 1                       A: si                 
+%    Desde: 2                       A: no                  
+%
+%
+% Etiquetado de valores en atributo: class
+%    Desde: 1                       A: pulmon                
+%    Desde: 2                       A: 'cabeza y cuello'     
+%    Desde: 3                       A: esofago           
+%    Desde: 4                       A: tiroides             
+%    Desde: 5                       A: estomago             
+%    Desde: 6                       A: 'duodeno e intestino delgado' 
+%    Desde: 7                       A: colon               
+%    Desde: 8                       A: recto              
+%    Desde: 9                       A: ano                
+%    Desde: 10                      A: 'glandulas salivales'   
+%    Desde: 11                      A: pancreas            
+%    Desde: 12                      A: 'vasicula viliar'         
+%    Desde: 13                      A: higado               
+%    Desde: 14                      A: rinion              
+%    Desde: 15                      A: vejiga             
+%    Desde: 16                      A: testiculos              
+%    Desde: 17                      A: prostata            
+%    Desde: 18                      A: ovarios               
+%    Desde: 19                      A: 'cuerpo uterino'      
+%    Desde: 20                      A: 'cuello uterino'      
+%    Desde: 21                      A: vagina              
+%    Desde: 22                      A: mama              
+%
+@relation 'Tumor Primario'
+@attribute edad { '<30', '30-59', '>=60'}
+@attribute genero { hombre, mujer}
+@attribute tipo-histologico { epidermoide, adenoide, anaplasico}
+@attribute grado-de-tumor { bueno, intermedio, grave}
+@attribute hueso { si, no}
+@attribute medula-osea { si, no}
+@attribute pulmon { si, no}
+@attribute pleura { si, no}			%Membrana serosa que recubre las paredes de la cavidad torácica y los pulmones.
+@attribute peritoneum { si, no}		%Membrana que cubre la superficie interior del abdomen y forma varios pliegues que envuelven las vísceras.
+@attribute higado { si, no}
+@attribute cerebro { si, no}
+@attribute piel { si, no}
+@attribute cuello { si, no}
+@attribute supraclavicular { si, no}
+@attribute axilar { si, no}
+@attribute madiastino { si, no}		%Espacio medio de la caja torácica, entre las dos pleuras, la columna vertebral y el esternón
+@attribute abdominal { si, no}
+@attribute class { pulmon, 'cabeza y cuello', esofago, tiroides, estomago, 'duodeno e intestino delgado', colon, recto, ano, 'glandulas salivales', pancreas, 'vasicula viliar', higado, rinion, vejiga, testiculos, prostata, ovarios, 'cuerpo uterino', 'cuello uterino', vagina, mama}
+@data
+'>=60',mujer,?,?,no,no,no,no,no,si,no,no,no,no,no,no,no,pulmon
+'>=60',hombre,?,grave,no,no,no,no,no,si,no,no,no,si,no,si,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,si,no,no,no,si,no,no,si,no,no,mama
+'30-59',mujer,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',hombre,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,no,colon
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,prostata
+'30-59',mujer,adenoide,?,si,no,no,no,no,no,si,no,no,no,no,si,no,pulmon
+'30-59',hombre,adenoide,intermedio,no,no,no,no,no,no,no,no,si,si,no,no,no,prostata
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,si,no,no,no,no,no,no,no,ovarios
+'>=60',mujer,?,?,no,no,no,no,si,si,no,no,no,si,no,no,no,pulmon
+'30-59',hombre,epidermoide,?,no,no,no,si,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'>=60',mujer,?,?,si,no,si,no,no,no,no,no,no,no,no,no,no,tiroides
+'>=60',mujer,adenoide,?,no,si,no,no,si,no,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,epidermoide,bueno,si,no,no,no,no,no,no,si,si,si,no,no,no,pulmon
+'30-59',hombre,epidermoide,?,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',hombre,anaplasico,grave,no,no,no,si,no,si,no,no,si,no,no,si,si,pulmon
+'30-59',hombre,?,grave,si,no,no,no,no,si,no,no,no,no,no,si,no,pulmon
+'>=60',hombre,adenoide,intermedio,no,no,no,si,si,no,no,no,no,no,no,no,no,higado
+'>=60',hombre,epidermoide,grave,si,no,si,si,no,si,no,no,no,no,no,no,si,pulmon
+'30-59',mujer,adenoide,?,no,no,no,no,si,si,no,si,no,no,no,no,si,ovarios
+'30-59',mujer,adenoide,bueno,no,no,no,no,no,no,no,no,no,si,no,no,no,rinion
+'<30',mujer,adenoide,grave,si,no,no,no,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',hombre,epidermoide,bueno,si,no,no,no,no,no,no,no,si,si,no,no,no,'glandulas salivales'
+'<30',hombre,adenoide,grave,no,no,si,no,no,no,no,no,si,si,si,no,no,mama
+'>=60',hombre,adenoide,bueno,no,no,no,no,no,si,no,si,no,no,no,no,no,recto
+'>=60',hombre,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,epidermoide,grave,no,no,no,no,no,si,no,no,no,no,no,si,no,pulmon
+'>=60',mujer,adenoide,grave,no,no,no,no,no,si,no,no,no,no,no,no,si,pancreas
+'>=60',hombre,adenoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,prostata
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'>=60',mujer,?,grave,no,no,no,no,no,si,no,no,no,no,no,no,no,'vasicula viliar'
+'30-59',mujer,adenoide,grave,no,no,no,no,si,si,no,no,no,no,si,si,si,mama
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'>=60',mujer,adenoide,grave,no,no,si,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,si,si,no,si,estomago
+'30-59',hombre,adenoide,?,no,no,no,no,no,no,si,no,no,no,no,no,si,estomago
+'30-59',hombre,adenoide,grave,no,no,no,no,no,no,no,no,no,si,no,si,no,pulmon
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,si,no,no,no,no,tiroides
+'<30',hombre,?,grave,si,no,no,si,si,no,no,no,no,no,no,no,no,pancreas
+'30-59',hombre,?,grave,no,no,no,no,si,no,si,si,no,no,no,si,si,pulmon
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,no,pancreas
+'30-59',mujer,adenoide,?,no,no,si,no,no,si,no,no,no,no,no,no,si,pancreas
+'30-59',mujer,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,?,grave,si,no,no,no,no,no,no,si,si,no,no,no,no,esofago
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,si,no,no,no,no,no,no,si,pancreas
+'30-59',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,epidermoide,intermedio,si,no,no,no,no,no,no,?,si,si,no,no,no,pulmon
+'>=60',mujer,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'>=60',mujer,adenoide,bueno,no,no,no,no,no,no,no,no,no,si,no,no,no,estomago
+'>=60',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,no,si,si,'vasicula viliar'
+'>=60',mujer,anaplasico,grave,no,no,no,si,no,no,no,no,no,no,no,si,no,tiroides
+'30-59',mujer,adenoide,?,si,no,no,si,no,no,no,si,si,si,si,si,no,mama
+'<30',hombre,?,?,no,no,no,no,si,si,no,no,no,no,no,no,no,colon
+'30-59',mujer,adenoide,?,no,no,si,no,no,no,no,no,si,si,si,si,si,estomago
+'30-59',hombre,?,grave,si,no,no,si,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',hombre,?,grave,si,si,no,no,no,no,si,no,no,no,no,si,no,pulmon
+'30-59',hombre,adenoide,?,no,no,si,no,no,si,no,no,no,no,no,no,si,esofago
+'30-59',mujer,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,mama
+'<30',mujer,?,grave,si,no,no,no,no,no,si,no,no,si,si,si,no,pulmon
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',hombre,?,grave,si,si,si,si,si,si,no,no,no,no,no,si,si,pulmon
+'>=60',hombre,?,grave,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,adenoide,?,no,no,si,no,no,si,no,no,no,no,no,no,si,'cuerpo uterino'
+'30-59',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,no,no,no,no,recto
+'30-59',mujer,adenoide,bueno,no,no,no,si,si,no,no,no,no,no,no,no,no,estomago
+'>=60',hombre,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,prostata
+'30-59',hombre,adenoide,?,no,no,no,si,no,no,no,no,no,no,no,no,no,pulmon
+'30-59',mujer,adenoide,grave,si,no,no,si,no,si,no,no,no,si,no,si,no,tiroides
+'30-59',mujer,adenoide,?,si,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'>=60',mujer,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,no,pancreas
+'>=60',hombre,adenoide,?,si,no,si,no,no,no,no,no,no,no,no,no,no,rinion
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,rinion
+'30-59',mujer,adenoide,grave,no,no,no,si,no,no,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,no,no,si,no,si,no,pulmon
+'>=60',hombre,epidermoide,grave,no,no,no,no,no,no,no,no,no,si,no,no,no,pulmon
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,no,si,si,no,si,si,pulmon
+'30-59',hombre,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,pulmon
+'30-59',hombre,adenoide,intermedio,no,no,si,si,no,no,no,no,no,no,no,no,no,testiculos
+'30-59',hombre,?,grave,si,no,si,si,no,si,no,no,no,no,no,si,si,pulmon
+'30-59',mujer,adenoide,?,si,no,no,no,no,si,no,no,no,no,no,no,no,pulmon
+'30-59',hombre,?,grave,no,no,no,si,no,si,no,si,no,no,no,no,no,pulmon
+'30-59',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',hombre,anaplasico,grave,si,si,no,no,no,no,no,no,no,no,no,si,no,pulmon
+'>=60',mujer,adenoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,tiroides
+'30-59',hombre,?,grave,no,no,si,no,no,si,no,no,no,no,no,si,si,pulmon
+'>=60',hombre,epidermoide,intermedio,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,si,ovarios
+'30-59',mujer,epidermoide,grave,no,no,no,no,no,si,si,no,no,no,no,si,no,pulmon
+'30-59',mujer,anaplasico,grave,no,no,no,si,no,no,si,no,no,no,no,si,no,pulmon
+'>=60',hombre,adenoide,?,no,no,si,no,si,si,no,no,no,no,no,no,si,estomago
+'30-59',hombre,adenoide,?,no,no,si,no,no,no,no,no,no,si,no,no,no,pulmon
+'>=60',hombre,adenoide,?,si,no,si,no,no,no,no,no,no,no,no,si,si,rinion
+'30-59',mujer,adenoide,intermedio,si,no,no,no,no,no,no,no,no,no,no,no,si,'cuello uterino'
+'30-59',hombre,?,grave,no,no,no,no,no,si,no,no,no,si,no,no,no,esofago
+'>=60',hombre,adenoide,?,no,no,no,no,si,si,no,no,no,no,no,no,no,estomago
+'30-59',mujer,?,?,no,no,no,si,no,no,no,no,no,no,no,no,no,pulmon
+'30-59',hombre,adenoide,?,si,no,si,no,si,no,no,no,no,no,no,no,si,rinion
+'>=60',mujer,adenoide,?,no,no,si,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'30-59',mujer,adenoide,intermedio,no,no,no,no,si,no,no,no,no,no,no,no,no,estomago
+'30-59',hombre,?,grave,no,no,no,si,no,no,no,no,no,si,no,si,si,pulmon
+'30-59',mujer,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,no,estomago
+'30-59',mujer,adenoide,?,si,no,no,si,no,no,no,no,no,no,no,no,no,mama
+'<30',mujer,adenoide,bueno,si,no,si,no,no,no,no,si,no,no,no,no,no,tiroides
+'>=60',hombre,epidermoide,intermedio,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'>=60',mujer,adenoide,bueno,no,no,si,no,no,no,no,no,no,no,no,no,no,recto
+'30-59',mujer,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,higado
+'30-59',mujer,?,?,no,no,no,no,no,no,no,no,si,si,no,no,no,'cabeza y cuello'
+'30-59',hombre,epidermoide,?,no,no,no,si,no,si,no,no,no,no,no,no,no,pulmon
+'<30',hombre,adenoide,bueno,no,no,no,no,si,no,no,no,no,si,no,no,no,estomago
+'<30',mujer,?,bueno,no,no,no,no,no,no,no,no,no,no,no,no,no,rinion
+'30-59',mujer,epidermoide,grave,si,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,?,?,si,no,si,no,no,no,no,no,no,no,no,no,no,rinion
+'>=60',mujer,adenoide,grave,no,no,si,no,si,si,no,no,no,no,no,no,si,ovarios
+'>=60',mujer,adenoide,?,no,no,no,si,si,no,si,no,no,no,no,no,si,higado
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,rinion
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,si,no,no,no,no,si,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'>=60',mujer,adenoide,bueno,no,no,no,no,no,si,no,no,no,no,no,no,no,estomago
+'<30',hombre,adenoide,?,no,no,no,si,no,no,no,no,no,no,no,no,no,estomago
+'>=60',mujer,adenoide,intermedio,no,no,no,no,no,no,no,no,si,si,si,no,no,mama
+'<30',mujer,adenoide,?,si,no,no,no,si,no,no,no,si,si,si,no,si,estomago
+'>=60',hombre,epidermoide,?,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',hombre,adenoide,grave,no,no,no,no,no,si,no,no,no,no,no,no,no,pancreas
+'>=60',hombre,epidermoide,intermedio,si,no,no,no,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,si,no,no,no,no,no,no,no,no,si,ovarios
+'>=60',hombre,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,no,estomago
+'>=60',mujer,?,grave,si,no,no,no,no,no,no,no,no,no,no,no,si,tiroides
+'<30',mujer,?,grave,si,no,si,si,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,adenoide,?,si,no,no,si,no,si,no,no,si,si,si,si,si,mama
+'>=60',mujer,adenoide,grave,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',hombre,adenoide,bueno,no,no,no,no,no,no,no,no,no,no,no,si,no,estomago
+'>=60',mujer,adenoide,intermedio,no,no,no,no,no,no,no,no,no,si,si,no,no,mama
+'30-59',hombre,adenoide,?,si,no,si,no,no,no,no,no,no,no,no,no,no,rinion
+'<30',mujer,adenoide,?,si,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'>=60',hombre,adenoide,bueno,no,no,no,no,no,si,no,no,no,no,no,no,no,recto
+'30-59',hombre,adenoide,?,si,no,si,no,no,no,si,no,no,no,no,si,no,estomago
+'30-59',hombre,epidermoide,?,no,no,no,no,no,no,no,no,no,si,?,si,no,pulmon
+'30-59',hombre,epidermoide,?,no,no,si,no,no,no,no,no,no,si,no,no,no,esofago
+'30-59',mujer,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,?,?,si,no,no,no,no,no,no,no,no,si,si,no,no,mama
+'30-59',hombre,epidermoide,grave,no,no,si,no,no,no,no,no,si,si,si,si,no,esofago
+'>=60',hombre,adenoide,grave,no,no,no,no,no,si,no,no,no,no,no,no,no,estomago
+'30-59',mujer,adenoide,intermedio,si,no,no,si,no,no,no,no,no,si,si,si,si,mama
+'30-59',mujer,anaplasico,grave,no,no,no,si,si,no,no,no,no,si,no,si,no,pulmon
+'>=60',mujer,?,grave,no,no,no,no,no,si,no,no,no,no,no,no,si,estomago
+'30-59',hombre,epidermoide,grave,si,no,no,si,no,no,no,no,no,si,no,si,no,pulmon
+'30-59',hombre,epidermoide,grave,si,no,no,no,no,no,no,no,no,no,no,no,no,pulmon
+'>=60',hombre,adenoide,?,no,no,si,si,no,no,no,no,no,no,no,no,no,rinion
+'30-59',hombre,epidermoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,pulmon
+'>=60',mujer,adenoide,?,no,no,no,no,si,si,no,no,no,no,no,no,no,'vasicula viliar'
+'<30',mujer,adenoide,bueno,si,si,no,no,si,no,no,no,no,no,no,no,no,estomago
+'>=60',mujer,adenoide,?,no,no,si,no,no,no,no,no,no,no,no,no,no,higado
+'30-59',hombre,adenoide,?,no,no,no,si,si,si,no,no,no,no,no,no,si,pancreas
+'>=60',mujer,adenoide,intermedio,no,no,no,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'>=60',mujer,adenoide,grave,si,no,no,no,no,no,no,no,no,no,no,no,si,'cuerpo uterino'
+'30-59',mujer,adenoide,grave,no,no,no,no,no,si,no,no,no,no,no,no,si,pancreas
+'>=60',mujer,?,grave,no,no,no,no,no,no,no,no,no,no,no,si,si,pulmon
+'>=60',hombre,?,grave,si,no,no,no,no,si,no,no,no,no,no,si,si,pulmon
+'30-59',hombre,adenoide,bueno,no,no,no,no,si,si,no,no,no,no,no,no,si,colon
+'>=60',hombre,adenoide,bueno,no,no,no,no,no,no,no,no,no,no,no,no,si,prostata
+'>=60',mujer,adenoide,?,si,no,si,no,no,no,no,no,no,no,no,no,no,tiroides
+'30-59',hombre,anaplasico,grave,no,no,si,no,si,no,no,no,no,no,no,no,si,pulmon
+'>=60',hombre,adenoide,bueno,no,no,si,no,no,si,no,no,no,no,no,si,si,prostata
+'>=60',mujer,adenoide,?,no,no,no,no,si,si,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,no,no,si,no,si,no,pulmon
+'30-59',hombre,adenoide,?,no,no,si,si,no,no,no,no,no,no,no,si,si,pancreas
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'30-59',hombre,?,grave,no,no,no,no,no,no,si,si,no,si,si,si,no,pulmon
+'30-59',mujer,adenoide,?,si,no,no,no,no,no,no,no,no,si,si,no,no,mama
+'30-59',mujer,?,?,no,no,no,no,si,no,no,no,no,no,no,no,si,ovarios
+'30-59',mujer,adenoide,intermedio,no,no,no,no,si,no,no,no,no,no,no,no,si,colon
+'30-59',hombre,adenoide,grave,no,no,no,si,no,si,no,no,no,no,no,si,si,pancreas
+'>=60',hombre,adenoide,bueno,no,no,no,no,no,no,si,no,no,no,no,no,no,rinion
+'30-59',hombre,adenoide,?,no,no,no,no,si,si,no,no,no,no,no,no,si,estomago
+'>=60',hombre,epidermoide,bueno,si,no,no,no,si,si,no,no,no,no,no,si,no,pulmon
+'30-59',hombre,adenoide,grave,si,no,no,no,no,si,no,no,no,no,no,no,no,estomago
+'30-59',mujer,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,no,no,'vasicula viliar'
+'30-59',hombre,adenoide,?,no,no,no,si,si,si,no,no,no,si,no,no,si,colon
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,no,no,si,no,no,no,estomago
+'30-59',mujer,adenoide,intermedio,no,no,no,no,si,no,no,si,si,si,si,no,no,mama
+'30-59',hombre,adenoide,intermedio,no,no,si,no,no,no,no,no,si,si,no,si,no,pulmon
+'>=60',hombre,adenoide,intermedio,no,no,no,si,si,si,no,no,no,no,no,no,si,colon
+'30-59',hombre,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,no,pancreas
+'30-59',hombre,adenoide,bueno,no,no,no,no,si,si,no,no,no,no,no,no,no,pancreas
+'30-59',hombre,adenoide,?,si,no,si,no,no,no,si,no,no,no,no,si,no,rinion
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,colon
+'30-59',hombre,anaplasico,grave,no,no,no,no,no,no,si,no,no,no,no,no,no,pulmon
+'30-59',mujer,adenoide,intermedio,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'<30',hombre,?,grave,no,no,no,no,no,si,no,no,no,si,no,si,no,pulmon
+'30-59',mujer,adenoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,pulmon
+'30-59',hombre,adenoide,?,si,no,si,si,no,no,no,no,no,no,no,si,no,rinion
+'30-59',mujer,adenoide,intermedio,no,no,no,no,no,no,no,no,no,no,no,no,si,'cuerpo uterino'
+'30-59',hombre,?,?,si,no,no,no,no,no,no,si,no,no,no,no,no,pulmon
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,estomago
+'>=60',mujer,adenoide,?,si,no,si,si,no,si,no,no,no,no,no,si,si,pancreas
+'<30',hombre,adenoide,?,no,no,no,no,no,no,no,no,no,si,no,no,no,rinion
+'30-59',mujer,adenoide,?,si,no,si,si,si,si,no,no,no,no,no,si,si,pulmon
+'30-59',hombre,?,grave,no,no,no,si,no,si,si,no,no,no,no,si,si,pulmon
+'30-59',hombre,adenoide,intermedio,si,no,no,no,no,no,no,no,no,no,no,no,no,prostata
+'>=60',mujer,epidermoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'30-59',hombre,adenoide,bueno,no,no,si,no,no,no,no,si,no,no,si,no,no,rinion
+'>=60',mujer,?,?,no,no,no,no,no,si,no,no,no,no,no,no,si,estomago
+'<30',hombre,anaplasico,grave,no,no,no,no,no,no,no,no,no,si,no,no,no,higado
+'>=60',mujer,adenoide,?,no,no,si,no,no,si,no,no,no,no,no,si,si,colon
+'30-59',mujer,adenoide,?,no,no,si,no,no,no,no,no,no,no,no,no,no,colon
+'30-59',hombre,?,grave,si,no,no,no,no,no,no,no,no,no,no,no,no,esofago
+'<30',hombre,adenoide,grave,si,si,si,no,no,si,si,no,no,no,si,si,si,estomago
+'<30',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,rinion
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,si,esofago
+'>=60',hombre,adenoide,grave,no,no,si,no,no,si,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,si,no,pulmon
+'>=60',hombre,epidermoide,?,no,no,no,no,no,no,no,no,no,no,no,no,si,pulmon
+'30-59',mujer,adenoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,'cuerpo uterino'
+'>=60',hombre,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,si,si,pulmon
+'>=60',mujer,?,grave,si,no,no,si,no,si,no,no,no,no,no,no,no,pulmon
+'30-59',hombre,?,grave,si,no,no,no,si,no,si,no,no,no,no,si,si,pulmon
+'<30',hombre,adenoide,?,no,no,no,no,si,si,no,si,no,no,no,no,si,rinion
+'30-59',mujer,?,grave,no,no,si,si,si,si,no,si,no,no,no,si,si,pulmon
+'30-59',mujer,adenoide,?,no,no,no,si,no,no,no,no,no,no,no,no,no,ovarios
+'>=60',mujer,?,grave,si,no,no,si,no,no,no,no,no,no,no,no,no,pulmon
+'<30',mujer,adenoide,bueno,si,no,no,no,no,no,no,no,no,si,no,no,si,estomago
+'30-59',mujer,adenoide,?,no,no,si,si,si,no,no,no,no,no,no,no,si,estomago
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,estomago
+'30-59',mujer,adenoide,intermedio,si,no,si,no,no,no,no,no,no,no,no,si,no,tiroides
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'30-59',mujer,adenoide,?,no,no,si,si,si,no,no,no,no,si,no,no,no,mama
+'<30',mujer,?,grave,si,no,si,si,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',mujer,adenoide,bueno,no,no,no,si,si,no,no,no,no,no,no,no,no,estomago
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'30-59',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,adenoide,bueno,si,no,si,no,no,no,no,no,no,no,no,no,no,tiroides
+'>=60',mujer,adenoide,grave,no,no,no,no,no,si,no,no,no,no,no,si,si,'vasicula viliar'
+'30-59',hombre,epidermoide,?,si,no,no,si,si,no,no,no,si,si,no,no,no,'glandulas salivales'
+'>=60',mujer,adenoide,grave,no,no,si,si,si,si,no,no,no,no,no,si,si,'vasicula viliar'
+'>=60',mujer,?,grave,no,no,no,no,no,si,no,no,no,no,no,si,si,pulmon
+'30-59',hombre,adenoide,grave,no,no,no,no,si,si,no,no,no,no,no,no,no,pancreas
+'>=60',mujer,adenoide,?,no,no,si,no,no,no,no,no,no,no,no,no,no,'duodeno e intestino delgado'
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'30-59',hombre,epidermoide,?,no,no,si,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'>=60',mujer,?,grave,no,no,no,no,no,no,no,no,no,no,no,no,si,ovarios
+'>=60',mujer,?,grave,no,no,si,no,no,si,si,no,no,si,no,si,no,pulmon
+'>=60',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,no,si,si,higado
+'>=60',mujer,adenoide,?,no,no,si,si,no,si,no,no,no,no,no,si,si,colon
+'30-59',mujer,adenoide,?,no,no,si,si,si,no,no,no,no,no,no,no,no,pancreas
+'30-59',hombre,?,?,no,no,no,no,si,no,no,no,no,no,no,no,no,vejiga
+'30-59',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',hombre,adenoide,intermedio,si,no,no,no,no,no,no,no,no,no,no,no,no,prostata
+'30-59',mujer,adenoide,?,no,no,no,si,no,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,?,grave,no,no,no,no,no,no,no,no,si,si,no,no,no,esofago
+'30-59',hombre,adenoide,bueno,no,no,si,si,no,no,no,no,no,no,no,si,si,estomago
+'>=60',hombre,epidermoide,intermedio,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,si,no,no,no,no,no,no,recto
+'<30',hombre,?,grave,no,no,si,no,no,no,no,no,no,no,no,no,no,pulmon
+'>=60',hombre,adenoide,?,no,no,si,no,no,no,no,no,no,si,no,no,no,estomago
+'>=60',mujer,adenoide,grave,no,no,no,no,si,si,no,no,no,no,no,no,no,pancreas
+'30-59',mujer,adenoide,grave,no,no,no,si,si,si,no,no,no,no,no,no,si,pancreas
+'>=60',hombre,epidermoide,?,no,no,si,no,no,si,no,no,no,no,no,si,si,esofago
+'>=60',mujer,?,grave,no,no,no,si,no,si,no,no,no,si,no,si,no,pulmon
+'30-59',hombre,adenoide,grave,si,no,no,no,no,no,no,si,no,no,no,no,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,adenoide,?,no,no,no,no,si,si,no,no,no,no,no,si,si,'cuerpo uterino'
+'>=60',mujer,adenoide,grave,no,no,si,no,no,si,no,no,no,no,no,si,si,pancreas
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'>=60',hombre,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,si,estomago
+'30-59',hombre,?,grave,no,no,no,no,si,si,no,no,no,no,no,si,no,pulmon
+'30-59',hombre,?,?,si,no,si,no,no,no,no,no,no,no,no,no,no,tiroides
+'30-59',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,si,no,si,no,pulmon
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,no,'vasicula viliar'
+'>=60',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,no,colon
+'30-59',hombre,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,si,estomago
+'>=60',hombre,adenoide,bueno,no,no,no,no,si,si,no,no,no,no,no,no,si,pancreas
+'30-59',hombre,epidermoide,grave,si,no,no,no,no,no,no,no,no,no,no,no,no,pulmon
+'<30',hombre,epidermoide,intermedio,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'>=60',hombre,adenoide,?,no,no,no,si,si,si,no,no,no,no,no,no,si,recto
+'30-59',mujer,adenoide,bueno,no,no,no,si,si,no,no,no,no,si,no,no,no,estomago
+'30-59',mujer,adenoide,?,no,no,si,no,no,no,no,no,no,no,no,si,si,colon
+'30-59',mujer,adenoide,?,no,no,no,no,si,no,no,no,no,no,no,no,si,ovarios
+'30-59',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,no,no,no,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'>=60',mujer,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,no,si,rinion
+'>=60',mujer,epidermoide,grave,no,no,no,no,no,no,no,no,no,no,no,si,no,pulmon
+'30-59',hombre,?,?,no,no,no,no,no,no,no,no,no,no,no,no,si,estomago
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'30-59',?,?,bueno,no,no,no,no,no,no,no,no,no,no,no,si,no,tiroides
+'30-59',mujer,adenoide,?,no,no,no,no,si,si,no,no,no,si,no,si,si,ovarios
+'30-59',mujer,adenoide,?,si,si,no,no,si,si,no,no,no,no,si,no,no,mama
+'>=60',mujer,adenoide,?,no,no,si,no,no,no,no,no,no,no,no,no,no,rinion
+'>=60',mujer,epidermoide,grave,si,no,si,no,no,no,no,no,no,si,no,no,no,pulmon
+'30-59',hombre,adenoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,rinion
+'>=60',hombre,?,grave,no,no,no,no,no,no,si,no,no,no,no,si,si,pulmon
+'30-59',mujer,adenoide,?,no,no,si,no,si,si,no,no,no,no,no,no,si,rinion
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,no,no,prostata
+'>=60',mujer,epidermoide,?,no,no,no,si,si,no,no,no,no,no,no,no,no,pulmon
+'30-59',hombre,adenoide,?,no,no,si,no,no,si,no,no,no,si,si,si,no,pulmon
+'30-59',mujer,adenoide,?,no,no,si,no,no,si,no,no,no,no,no,si,si,'cuello uterino'
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,si,no,no,mama
+'30-59',hombre,adenoide,bueno,si,no,no,no,no,no,no,no,no,no,no,no,no,tiroides
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,no,no,si,no,no,no,no,no,ovarios
+'30-59',hombre,adenoide,bueno,no,no,no,no,no,si,no,no,no,no,no,no,no,estomago
+'30-59',hombre,adenoide,?,no,no,no,si,si,no,no,no,no,no,no,si,si,pulmon
+'30-59',mujer,adenoide,?,si,no,no,no,no,no,no,si,no,no,no,no,no,pulmon
+'30-59',mujer,?,?,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'>=60',hombre,epidermoide,intermedio,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,adenoide,grave,no,no,no,no,si,si,no,no,no,no,no,no,no,ovarios
+'30-59',hombre,adenoide,?,no,no,si,si,no,no,no,no,no,no,no,si,si,higado
+'30-59',hombre,?,?,si,no,no,no,no,no,no,no,no,no,no,no,no,rinion
+'30-59',hombre,?,grave,no,no,no,no,no,no,no,si,no,no,no,no,no,pulmon
+'30-59',mujer,adenoide,?,no,no,no,no,no,si,no,no,no,no,no,no,no,ovarios
+'30-59',hombre,adenoide,intermedio,no,no,si,no,no,no,no,no,si,si,si,si,no,tiroides
+'>=60',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,si,no,no,no,'cabeza y cuello'
+'>=60',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,no,no,si,colon
+'30-59',mujer,epidermoide,?,si,no,si,no,si,si,no,no,no,no,no,no,si,vagina
+'30-59',mujer,adenoide,grave,no,no,no,no,no,no,no,no,no,si,no,no,no,pulmon
+'>=60',hombre,epidermoide,grave,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'>=60',mujer,adenoide,grave,no,no,si,no,no,no,no,no,no,no,no,si,si,rinion
+'30-59',mujer,adenoide,grave,no,no,si,no,si,si,no,no,no,no,no,si,no,pulmon
+'>=60',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,no,no,no,si,'vasicula viliar'
+'>=60',mujer,adenoide,intermedio,no,no,no,no,si,no,no,no,no,no,no,no,no,pancreas
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,si,no,no,no,no,no,no,si,estomago
+'30-59',hombre,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,no,colon
+'30-59',mujer,adenoide,?,no,no,no,no,no,no,no,no,no,si,no,no,no,estomago
+'>=60',mujer,adenoide,grave,no,no,no,no,no,si,no,no,no,no,no,no,si,'vasicula viliar'
+'30-59',hombre,?,grave,no,no,si,no,si,si,no,no,no,no,no,si,si,pancreas
+'>=60',hombre,?,grave,no,no,no,no,no,si,no,no,no,no,no,si,si,pulmon
+'>=60',hombre,?,grave,no,no,no,si,si,no,no,no,si,no,no,si,si,vejiga
+'30-59',hombre,adenoide,?,si,no,no,no,no,no,no,no,no,no,no,si,no,rinion
+'>=60',mujer,adenoide,?,no,no,si,si,si,no,no,no,no,no,no,no,si,'cuerpo uterino'
+'30-59',hombre,epidermoide,bueno,no,no,no,no,no,no,no,no,si,no,no,no,no,'cabeza y cuello'
+'30-59',mujer,?,grave,no,no,no,no,si,no,no,no,no,no,no,no,si,estomago
+'30-59',hombre,adenoide,bueno,si,no,no,no,no,no,no,no,si,si,no,si,no,prostata
+'30-59',mujer,adenoide,bueno,no,no,no,no,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',hombre,epidermoide,grave,si,no,no,no,no,no,no,si,no,no,si,no,no,pulmon
+'30-59',mujer,adenoide,bueno,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios
+'30-59',mujer,adenoide,?,si,no,si,si,si,si,si,no,no,no,no,no,si,'vasicula viliar'
+'30-59',mujer,adenoide,bueno,no,no,no,si,si,no,no,no,no,no,no,no,no,ovarios

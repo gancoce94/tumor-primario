@@ -1,0 +1,176 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Nombre:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.name %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Email:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.email %>
+    </div>
+  </p>
+</div>
+
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Edad:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.edad %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Género:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.genero.capitalize %>
+    </div>
+  </p>
+</div>
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Tipo Histológico:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.tipo_histologico.capitalize %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Grado Tumor:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.grado_tumor.capitalize %>
+    </div>
+  </p>
+</div>
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Dolor a los Huesos:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.hueso %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Medula Osea:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.medula_osea %>
+    </div>
+  </p>
+</div>
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Problemas en los pulmones:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.pulmon %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Pleura:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.pleura %>
+    </div>
+  </p>
+</div>
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Peritoneo:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.peritoneum %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Problemas al Hígado:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.higado %>
+    </div>
+  </p>
+</div>
+
+<div class="row">
+  <p>
+    <div class="input-field col s3">
+      <b>Dolor de cabeza (cerebro):</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.cerebro %>
+    </div>
+  </p>
+
+  <p>
+    <div class="input-field col s3">
+      <b>Problemas en la piel:</b>
+    </div>
+    <div class="input-field col s3">
+      <%= @tumor.piel %>
+    </div>
+  </p>
+</div>
+
+<p>
+  <b>Cuello:</b>
+  <%= @tumor.cuello %>
+</p>
+
+<p>
+  <b>Supraclavicular:</b>
+  <%= @tumor.supraclavicular %>
+</p>
+
+<p>
+  <b>Axilar:</b>
+  <%= @tumor.axilar %>
+</p>
+
+<p>
+  <b>Mediastino:</b>
+  <%= @tumor.mediastino %>
+</p>
+
+<p>
+  <b>Abdominal:</b>
+  <%= @tumor.abdominal %>
+</p>
+
+<p>
+  <b>Tipo tumor:</b>
+  <%= @tumor.tipo_tumor %>
+</p>
+
+<%= link_to 'Edit', edit_tumor_path(@tumor) %> |
+<%= link_to 'Back', tumors_path %>
+</div>

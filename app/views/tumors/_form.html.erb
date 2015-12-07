@@ -1,0 +1,189 @@
+<div class="row">
+  <div class="col s12">
+  <%= form_for(@tumor) do |f| %>
+    <% if @tumor.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@tumor.errors.count, "error") %> prohibited this tumor from being saved:</h2>
+
+        <ul>
+        <% @tumor.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <%= f.label :name, 'Nombres y apellidos' %>
+        <%= f.text_field :name %>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">email</i>
+        <%= f.label :email, 'Direccion email' %>
+        <%= f.email_field :email %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.select :edad, [["Menor a 30", "<30"], ["De 30 a 60", "30-59"], ["Mayor a 60", ">=60"]], { :include_blank => 'Seleccione una edad' }, :selected => params[:edad] %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.select :genero, [["Masculino", "hombre"], ["Femenino", "mujer"]], { :include_blank => 'Seleccione un genero' }, :selected => params[:genero] %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6">
+        <%= f.select :tipo_histologico, [["Epidermoide", "epidermoide"], ["Adenoide", "adenoide"], ["Anaplasico", "anaplasico"]], { :include_blank => 'Seleccione una tipo histologico' }, :selected => params[:tipo_histologico] %>
+      </div>
+      <div class="input-field col s6">
+        <%= f.select :grado_tumor, [["Leve", "bueno"], ["Intermedio", "intermedio"], ["Grave", "grave"]], { :include_blank => 'Seleccione un grado del tumor' }, :selected => params[:grado_tumor] %>
+      </div>
+    </div>
+
+    <div class="row">
+    <div class="switch col s3 center-align">
+      <h5><%= f.label :hueso, 'Malestar general al cuerpo', :class => "" %></h5>
+      <label>
+        No
+        <%= f.check_box :hueso %>
+        <span class="lever"></span>
+        Si
+      </label>
+    </div>
+    <div class="switch col s3 center-align">
+      <h5><%= f.label :medula_osea, 'Dolor a los huesos' %></h5>
+      <label>
+        No
+        <%= f.check_box :medula_osea %>
+        <span class="lever"></span>
+        Si
+      </label>
+    </div>
+    <div class="switch col s3 center-align">
+      <h5><%= f.label :pulmon, 'Dolor en la espalda (pulmones)' %></h5>
+      <label>
+        No
+        <%= f.check_box :pulmon %>
+        <span class="lever"></span>
+        Si
+      </label>
+    </div>
+    <div class="switch col s3 center-align">
+      <h5><%= f.label :pleura, 'Dolor al pecho (pleura)' %></h5>
+      <label>
+        No
+        <%= f.check_box :pleura %>
+        <span class="lever"></span>
+        Si
+      </label>
+    </div>
+    </div>
+
+    <div class="row">
+      <div class="switch col s4 center-align">
+      <h5><%= f.label :peritoneum, 'Dolor bajo el torax (peritoneo)' %></h5>
+      <label>
+        No
+        <%= f.check_box :peritoneum %>
+        <span class="lever"></span>
+        Si
+      </label>
+      </div>
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :higado, 'Problemas al higado' %></h5>
+        <label>
+          No
+          <%= f.check_box :higado %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :cerebro, 'Dolor a la cabeza' %></h5>
+        <label>
+          No
+          <%= f.check_box :cerebro %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :piel, 'Problemas en la piel' %></h5>
+        <label>
+          No
+          <%= f.check_box :piel %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :cuello, 'Dolor al cuello' %></h5>
+        <label>
+          No
+          <%= f.check_box :cuello %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :supraclavicular, 'Dolor al corazon (supraclavicular)' %></h5>
+        <label>
+          No
+          <%= f.check_box :supraclavicular %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :axilar, 'Problemas de ganglio axilar' %></h5>
+        <label>
+          No
+          <%= f.check_box :axilar %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :mediastino, 'Dolor al pecho (mediastino)' %></h5>
+        <label>
+          No
+          <%= f.check_box :mediastino %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+      <div class="switch col s4 center-align">
+        <h5><%= f.label :abdominal, 'Dolor abdominal' %></h5>
+        <label>
+          No
+          <%= f.check_box :abdominal %>
+          <span class="lever"></span>
+          Si
+        </label>
+      </div>
+    </div>
+    
+    <br>
+    <div class="row">
+      <div class="input-field col s2"></div>
+      <div class="actions btn waves-effect waves-light col s3 center-align">
+        <%= f.submit "Guardar" %>
+      </div>
+      <div class="input-field col s2"></div>
+      <div class="actions btn waves-effect waves-light col s3 pink center-align">
+        <%= f.submit "Limpiar", type: :reset %>    
+      </div>
+      <div class="input-field col s2"></div>
+    </div>
+
+  <% end %>
+
+  </div>
+</div>

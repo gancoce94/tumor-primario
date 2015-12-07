@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  edad: MyString
+  genero: MyString
+  tipo_histologico: MyString
+  grado_tumor: MyString
+  hueso: false
+  medula_osea: false
+  pulmon: false
+  pleura: false
+  peritoneum: false
+  higado: false
+  cerebro: false
+  piel: false
+  cuello: false
+  supraclavicular: false
+  axilar: false
+  mediastino: false
+  abdominal: false
+  tipo_tumor: MyString
+
+two:
+  edad: MyString
+  genero: MyString
+  tipo_histologico: MyString
+  grado_tumor: MyString
+  hueso: false
+  medula_osea: false
+  pulmon: false
+  pleura: false
+  peritoneum: false
+  higado: false
+  cerebro: false
+  piel: false
+  cuello: false
+  supraclavicular: false
+  axilar: false
+  mediastino: false
+  abdominal: false
+  tipo_tumor: MyString

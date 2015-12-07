@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TumorPrimario</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <script type="text/javascript" src="../../vendor/assets/javascripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../vendor/assets/javascripts/materialize.min.js"></script>
+    
+    <%= render "layouts/navbar" %>
+
+    <div class="container">    	
+		<%= yield %>
+    </div>
+	
+	<%= render "layouts/footer" %>
+
+	<script>
+		$(document).ready(function() {
+	    	$('select').material_select();
+
+	    	$(".button-collapse").sideNav();
+
+	    	new WOW().init();
+	    	
+	    	$("a[href='#top']").click(function() {
+			  $("html, body").animate({ scrollTop: 0 }, "slow");
+			  return false;
+			});
+	  	});
+	</script>
+	
+</body>
+</html>
