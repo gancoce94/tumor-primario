@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TumorPrimario</title>
+  <title>
+  	<% if content_for?(:titulo) %>
+  		<%= yield(:titulo) %>
+  	<% else %>
+  		Tumor Primario
+  	<% end %>
+  </title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -33,7 +39,11 @@
 			  $("html, body").animate({ scrollTop: 0 }, "slow");
 			  return false;
 			});
-	  	});
+
+			$('.collapsible').collapsible();
+		    $('.slider').slider();
+		    $('.materialboxed').materialbox();
+		});
 	</script>
 	
 </body>
