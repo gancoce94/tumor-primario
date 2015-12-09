@@ -11,18 +11,23 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <link rel="icon" type="image/jpg" href="../../assets/images/icon.jpg">
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 </head>
 <body>
-    <script type="text/javascript" src="../../vendor/assets/javascripts/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="../../vendor/assets/javascripts/materialize.min.js"></script>
     
     <%= render "layouts/navbar" %>
 
-    <div class="container">    	
-		<%= yield %>
+    <div class="container">
+        <div class="card blue-grey">
+            <div class="card-content white-text">
+            	<%= yield %>
+            </div>
+        </div>
     </div>
 	
 	<%= render "layouts/footer" %>
@@ -31,8 +36,8 @@
 		$(document).ready(function() {
 	    	$('select').material_select();
 
+	    	$(".dropdown-button").dropdown();
 	    	$(".button-collapse").sideNav();
-
 	    	new WOW().init();
 	    	
 	    	$("a[href='#top']").click(function() {
@@ -43,6 +48,11 @@
 			$('.collapsible').collapsible();
 		    $('.slider').slider();
 		    $('.materialboxed').materialbox();
+
+		    	jQuery(window).load(function() { 
+					jQuery(".preloader").delay(100).fadeOut("slow");
+					jQuery(".load").delay(100).fadeOut("slow");
+				});
 		});
 	</script>
 	

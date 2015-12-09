@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery-2.1.1.min
 //= require materialize.min
 //= require wow.min
 //= require_tree .

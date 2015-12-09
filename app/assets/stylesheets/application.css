@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
- *= require materialize
+ *= require materialize.min
+ *= require style
  *= require animate
  */

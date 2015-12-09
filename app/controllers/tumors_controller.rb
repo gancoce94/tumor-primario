@@ -5,7 +5,7 @@ class TumorsController < ApplicationController
   # GET /tumors.json
 
   def index
-    @tumors = Tumor.all    
+    @tumors = Tumor.paginate(:page => params[:page], :per_page => 2)  
   end
 
   # GET /tumors/1
@@ -22,6 +22,14 @@ class TumorsController < ApplicationController
   def edit
   end
 
+  def get_content_to_display
+     #Place code here
+     render :update do |page|
+          page.replace_html "display_ajax", :partial => 'name-of-your-partial'
+     end
+  end
+
+  
   # POST /tumors
   # POST /tumors.json
   def create

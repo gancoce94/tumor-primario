@@ -56,7 +56,8 @@
         </tbody>
       </table>
 
-
 <br>
-
+<ul class="pagination">
+<%= will_paginate @tumors, previous_label: "<li class='disabled'><i class='material-icons'>chevron_left</i>Anterior</li>", next_label: "<li>Siguiente<i class='material-icons'>chevron_right</i></li>", :class => "waves-effect", current: "asd" %>
+  </ul>
 <%= link_to 'Nuevo Registro', new_tumor_path %>
