@@ -9,13 +9,13 @@
         <li><%= link_to "Inicio", root_path, :class => "head-link" %></li>
         <li><%= link_to "Registrar", new_tumor_path %></li>
         <li><%= link_to "Listar", tumors_path %></li>
-        <li><%= link_to "Contacto"%></li>
+        <li><%= link_to "Contacto", contact_tumors_path %></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><%= link_to "Inicio", root_path %></li>
         <li><%= link_to "Registrar", new_tumor_path %></li>
         <li><%= link_to "Listar", tumors_path %></li>
-        <li><a> Contacto</a></li>
+        <li><%= link_to "Contacto", contact_tumors_path %></li>
       </ul>
     </div>
   </nav>
