@@ -34,12 +34,12 @@ class TumorsController < ApplicationController
   # POST /tumors.json
   def create
     tp = tumor_params
-    tp[:tipo_tumor], ad = tipo(tp)
+    tp[:tipo_tumor], ad, p = tipo(tp)
     @tumor = Tumor.new(tp)
 
     respond_to do |format|
       if @tumor.save
-        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad }
+        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad+"<>Con un grado de acierto de: "+p+" y un porcentaje de acierto de 83.19%" }
         format.json { render :show, status: :created, location: @tumor }
       else
         format.html { render :new }
@@ -52,10 +52,10 @@ class TumorsController < ApplicationController
   # PATCH/PUT /tumors/1.json
   def update
     tp = tumor_params
-    tp[:tipo_tumor], ad = tipo(tp)
+    tp[:tipo_tumor], ad, p = tipo(tp)
     respond_to do |format|
       if @tumor.update(tp)
-        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad }
+        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad+"<>Con un grado de acierto: "+p +" y un porcentaje de acierto de 83.19%"}
         format.json { render :show, status: :ok, location: @tumor }
       else
         format.html { render :edit }
