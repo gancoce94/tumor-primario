@@ -5,7 +5,7 @@ class TumorsController < ApplicationController
   # GET /tumors.json
 
   def index
-    @tumors = Tumor.paginate(:page => params[:page], :per_page => 2)  
+    @tumors = Tumor.all.paginate(:page => params[:page], :per_page => 5)  
   end
 
   # GET /tumors/1
@@ -39,7 +39,7 @@ class TumorsController < ApplicationController
 
     respond_to do |format|
       if @tumor.save
-        format.html { redirect_to @tumor, notice: 'Tumor was successfully created.'+ad }
+        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad }
         format.json { render :show, status: :created, location: @tumor }
       else
         format.html { render :new }
@@ -55,7 +55,7 @@ class TumorsController < ApplicationController
     tp[:tipo_tumor], ad = tipo(tp)
     respond_to do |format|
       if @tumor.update(tp)
-        format.html { redirect_to @tumor, notice: 'Tumor was successfully updated.'+ad }
+        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad }
         format.json { render :show, status: :ok, location: @tumor }
       else
         format.html { render :edit }
@@ -69,7 +69,7 @@ class TumorsController < ApplicationController
   def destroy
     @tumor.destroy
     respond_to do |format|
-      format.html { redirect_to tumors_url, notice: 'Tumor was successfully destroyed.' }
+      format.html { redirect_to tumors_url, notice: 'El registro se elimino con exito.' }
       format.json { head :no_content }
     end
   end

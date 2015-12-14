@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :tumors do
     collection do
       get 'contact'
+      get 'help_page'
     end
   end
   

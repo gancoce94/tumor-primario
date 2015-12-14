@@ -3,18 +3,20 @@
   <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!" target="_blank" class="brand-logo">Tumor Primario</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><%= link_to "Inicio", root_path, :class => "head-link" %></li>
         <li><%= link_to "Registrar", new_tumor_path %></li>
         <li><%= link_to "Listar", tumors_path %></li>
+        <li><%= link_to "Información", help_page_tumors_path %></li>
         <li><%= link_to "Contacto", contact_tumors_path %></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><%= link_to "Inicio", root_path %></li>
         <li><%= link_to "Registrar", new_tumor_path %></li>
         <li><%= link_to "Listar", tumors_path %></li>
+        <li><%= link_to "Información", help_page_tumors_path %></li>
         <li><%= link_to "Contacto", contact_tumors_path %></li>
       </ul>
     </div>

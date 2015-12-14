@@ -1,8 +1,12 @@
 <% content_for :titulo do %>
   Lista de Registro de Tumores
 <% end %>
-
-  <h1>Listing tumors</h1>
+<% if notice.to_s != '' %>
+  <div class="card-panel pink lighten-2">
+    <%= notice %>
+  </div>
+<% end %>
+  <h1>Lista de Registros</h1>
       <table class="responsive-table">
         <thead>
           <tr>
@@ -46,7 +50,7 @@
               </td>
               <td><%= tumor.tipo_histologico.capitalize %></td>
               <td><%= tumor.grado_tumor.capitalize %></td>
-              <td><%= tumor.tipo_tumor %></td>
+              <td><%= tumor.tipo_tumor.capitalize %></td>
               <td><%= link_to 'Mostrar Todo', tumor, :class => "actions btn waves-effect waves-light col s3 blue center-align white-text " %></td>
               <td><%= link_to 'Editar', edit_tumor_path(tumor), :class => "actions btn waves-effect waves-light col s3 green center-align white-text " %></td>
               <td><%= link_to 'Eliminar', tumor, method: :delete, data: { confirm: '¿Está seguro de querer eliminar el registro?' },
@@ -59,5 +63,5 @@
 <br>
 <ul class="pagination">
 <%= will_paginate @tumors, previous_label: "<li class='disabled'><i class='material-icons'>chevron_left</i>Anterior</li>", next_label: "<li>Siguiente<i class='material-icons'>chevron_right</i></li>", :class => "waves-effect", current: "asd" %>
-  </ul>
-<%= link_to 'Nuevo Registro', new_tumor_path %>
+</ul>
+

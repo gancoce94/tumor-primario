@@ -1,8 +1,17 @@
 <% content_for :titulo do %>
   Historia Clinica
 <% end %>
-<p id="notice"><%= notice %></p>
-
+<% content_for :tituloPanel do %>
+  Registro Completo
+<% end %>
+<div class="card-panel teal lighten-2">
+  <% 
+    asd = notice.split(/<>/) 
+    asd.each do |item|
+  %>
+  <%= item %> <br>
+  <% end %>
+</div>
 <div class="row">
   <p>
     <div class="input-field col s3 center-align">
@@ -30,7 +39,17 @@
       <b>Edad:</b>
     </div>
     <div class="input-field col s3 center-align">
-      <%= @tumor.edad %>
+                <% if @tumor.edad %>
+                  <% if @tumor.edad == ">30" %>
+                    <%= "Menor a 30" %>
+                  <% elsif @tumor.edad = "30-59" %>
+                    <%= "De 30 a 59" %>
+                  <% elsif @tumor.edad =="<60" %>
+                    <%= "Mayor a 60" %>
+                  <% end %>
+                <% else %>
+                  <%= "No se especifico la edad" %>
+                <% end %>
     </div>
   </p>
 
@@ -199,7 +218,7 @@
       <b>Tipo de tumor:</b>
     </div>
     <div class="input-field col s3 center-align">
-      <%= @tumor.tipo_tumor %>
+      <%= @tumor.tipo_tumor.capitalize %>
     </div>
   </p>
 </div>
