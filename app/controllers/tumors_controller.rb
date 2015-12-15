@@ -35,11 +35,17 @@ class TumorsController < ApplicationController
   def create
     tp = tumor_params
     tp[:tipo_tumor], ad, p = tipo(tp)
+    if p == nil
+      p=0
+    end
     @tumor = Tumor.new(tp)
-
     respond_to do |format|
       if @tumor.save
-        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad+"<>Con un grado de acierto de: "+p+" y un porcentaje de acierto de 83.19%" }
+        format.html { redirect_to @tumor, notice: 'Se registro con exito con tipo de tumor => '+tp[:tipo_tumor].capitalize+
+                                                  '.<>Arbol de decision:<>'+
+                                                  ad+'<>Con un grado de acierto de: '+
+                                                  p.to_s+
+                                                  ' y un porcentaje de acierto de 83.19%' }
         format.json { render :show, status: :created, location: @tumor }
       else
         format.html { render :new }
@@ -53,9 +59,16 @@ class TumorsController < ApplicationController
   def update
     tp = tumor_params
     tp[:tipo_tumor], ad, p = tipo(tp)
+    if p == nil
+      p=0
+    end
     respond_to do |format|
       if @tumor.update(tp)
-        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito.<>Arbol de decision:<>'+ad+"<>Con un grado de acierto: "+p +" y un porcentaje de acierto de 83.19%"}
+        format.html { redirect_to @tumor, notice: 'El registro fue actualizado con exito con tipo de tumor => '+tp[:tipo_tumor].capitalize+
+                                                  '.<>Arbol de decision:<>'+
+                                                  ad+'<>Con un grado de acierto de: '+
+                                                  p.to_s+
+                                                  ' y un porcentaje de acierto de 83.19%' }
         format.json { render :show, status: :ok, location: @tumor }
       else
         format.html { render :edit }

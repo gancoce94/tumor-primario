@@ -3,7 +3,10 @@
 <% end %>
 <% content_for :tituloPanel do %>
   Registro Completo
-<% end %>
+<% end 
+    if notice.to_s != ""
+%>
+
 <div class="card-panel teal lighten-2">
   <% 
     asd = notice.split(/<>/) 
@@ -12,6 +15,7 @@
   <%= item %> <br>
   <% end %>
 </div>
+<% end %>
 <div class="row">
   <p>
     <div class="input-field col s3 center-align">
